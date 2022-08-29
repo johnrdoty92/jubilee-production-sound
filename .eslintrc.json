@@ -28,6 +28,7 @@
     "rules": {
         "quotes": ["error", "backtick"],
         "semi": ["error", "always"],
-        "array-bracket-spacing": ["error", "always"]
+        "array-bracket-spacing": ["error", "always"],
+        "react/react-in-jsx-scope": ["off"]
     }
 }
