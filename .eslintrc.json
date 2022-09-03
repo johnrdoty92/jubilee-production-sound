@@ -29,6 +29,10 @@
         "quotes": ["error", "backtick"],
         "semi": ["error", "always"],
         "array-bracket-spacing": ["error", "always"],
-        "react/react-in-jsx-scope": ["off"]
+        "react/react-in-jsx-scope": ["off"],
+        "react/jsx-indent": ["warn", 2],
+        "object-property-newline": ["warn"],
+        "object-curly-newline": ["warn", { "multiline": true }],
+        "indent": ["warn", 2]
     }
 }

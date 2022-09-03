@@ -1,3 +1,4 @@
 export interface Step {
-    description: string
+    title: string
+    description: React.ReactNode
 }
