@@ -18,8 +18,8 @@ export const Header = () => {
         >
           <MenuIcon />
         </IconButton>
-        <Stack direction="row" spacing={1}>
-          <Link href="/" color="inherit">Setup</Link>
+        <Stack direction="row" spacing={3}>
+          <Link href="/" color="inherit">Sound Setup</Link>
           <Link href="/help" color="inherit">Help</Link>
         </Stack>
       </Toolbar>

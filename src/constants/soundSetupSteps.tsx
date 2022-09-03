@@ -1,13 +1,25 @@
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import { Step } from "../types/steps";
+
+const turnOnSystem = <Typography variant="body1">
+  Turn on the sound system by pressing the power button underneath the streaming computer. Turn on the streaming computer, too, if it&apos;s not already on.
+</Typography>;
+
+const downloadAbletonSet = <Stack>
+  <Typography variant="body1">Turn on the Ableton laptop. Open Finder, and click <i>Sets</i> on the left.</Typography>
+  <Typography variant="body1">If you don’t see <i>Sets</i> you can choose <i>Resources &gt; Worship &gt; Sets.</i></Typography>
+  <Typography variant="body1">Find the file labeled with the current date and drag it to the desktop. Double click the folder to unzip it.</Typography>
+</Stack>;
 
 export const soundSetupSteps: Step[] = [
   {
     title: `Turn on the sound system`,
-    description: `Turn on the sound system by pressing the power button underneath the streaming computer. Turn on the streaming computer, too, if it’s not already on.`
+    description: turnOnSystem
   },
   {
     title: `Download and unzip the Ableton set`,
-    description: `Turn on the Ableton laptop. Open Finder, and click “Sets” on the left. If you don’t see “Sets,” you can choose Resources > Worship > Sets. Find the file labeled with the current date and drag it to the desktop. Double click the folder to unzip it.`
+    description: downloadAbletonSet,
   },
   {
     title: `Set Ableton file permissions`,
