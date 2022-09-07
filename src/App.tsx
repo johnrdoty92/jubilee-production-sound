@@ -1,5 +1,5 @@
 import { CssBaseline } from '@mui/material';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Help } from './pages/Help/Help';
 import { SoundSetup } from './pages/SoundSetup/SoundSetup';
@@ -10,12 +10,12 @@ function App() {
     <ThemeProvider>
       <CssBaseline/>
       <Header/>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<SoundSetup />} />
           <Route path="/help" element={<Help/>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
