@@ -9,6 +9,12 @@ const theme = createTheme({
         i {
           color: #42a5f5;
         }
+        div[data-rmiz] img {
+          max-width: 100%;
+        }
+        [data-rmiz-modal-overlay="visible"] {
+          background-color: black;
+        }
       `,
     },
   },

@@ -1,26 +1,29 @@
 import AppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from "@mui/material/Toolbar";
-import { Link } from "@mui/material";
 import Stack from "@mui/system/Stack";
+import {styled} from "@mui/material/styles";
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)(({theme}) => ({
+  textDecoration: `none`,
+  color: `white`,
+  padding: theme.spacing(1),
+  backgroundColor: `rgba(255,255,255,0.2)`,
+  borderRadius: 15,
+}));
 
 export const Header = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={theme => ({
+      [theme.breakpoints.down(`sm`)]:{
+        top: `auto`,
+        bottom: 0 
+      }
+    })}>
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
         <Stack direction="row" spacing={3}>
-          <Link href="/" color="inherit">Sound Setup</Link>
-          <Link href="/help" color="inherit">Help</Link>
+          <StyledLink to="/" color="inherit">Sound Setup</StyledLink>
+          <StyledLink to="troubleshooting" color="inherit">Troubleshooting</StyledLink>
         </Stack>
       </Toolbar>
     </AppBar>
