@@ -6,7 +6,7 @@ import SoundSystemOn from "../../assets/images/1SoundSystemPower.webp";
 import FinderSet from "../../assets/images/2FinderSets.webp";
 import CheckPermissions from "../../assets/images/3CheckPermissions.webp";
 import CheckTrackGroups from "../../assets/images/5aCheckTrackGroups.webp";
-import CheckAbletonTrackMutes from "../../assets/images/5bCheckAbletonTrackMutes.webp";
+import CheckSelectedTracks from "../../assets/images/5bCheckSelectedTracks.webp";
 import GroupAbletonTracks from "../../assets/images/5cGroupAbletonTracks.webp";
 import RoutingSheet from "../../assets/images/6aRoutingSheet.webp";
 import RoutingSheetNames from "../../assets/images/6bRoutingSheetNames.webp";
@@ -40,18 +40,18 @@ const abletonDante = <Typography variant="body1">Open the folder and double clic
 const grouping = <Stack spacing={1}>
   <Typography variant="body1">When Ableton opens up, look to the column on the right and you&apos;ll see some grey tracks. These are groups for all the tracks.</Typography>
   <Image alt="ableton tracks" src={CheckTrackGroups}/>
-  <Typography variant="body1">If they all say <i>Out 1</i>, <i>Out 2</i>, etc, you&apos;ll need to assign each track to the right group. If they are already named  you can skip to the next step.</Typography>
-  <Typography variant="body1">To group tracks, first change the group names from <i>Out 1</i>, <i>Out 2</i>, etc, to meaningful names like <i>EG1</i>, <i>AUX1</i>, and so on. Coordinate with the worship leader to see how many band members will be playing, and how many spots are left on the sound board for tracks.</Typography>
-  <Typography variant="body1">Then, for each song, look at all the numbered yellow-orange boxes on the right.</Typography>
-  <Image alt="enabled buttons" src={CheckAbletonTrackMutes}/>
-  <Typography variant="body1">These are the enabled tracks that the worship leader plans to use. To make sure they are being sent to the right group, click the small arrow next to the name and set the bottom option to the groups you named.</Typography>
+  <Typography variant="body1">If they all say <i>Out 1</i>, <i>Out 2</i>, etc, you&apos;ll need to assign each track to the right group. If they are already named you can skip to the next step.</Typography>
+  <Typography variant="body1">To start assigning tracks to groups, first change the names by double clicking the name (e.g., <i>Out 1</i>). Try to use meaningful names like <i>EG1</i>, <i>AUX1</i>, etc. Coordinate with the worship leader to see how many band members will be playing, and how many spots are left on the sound board for track groups.</Typography>
+  <Typography variant="body1">Then, for each song, look at all the numbered yellow-orange boxes on the right. These are the enabled tracks that the worship leader plans to use.</Typography>
+  <Image alt="enabled buttons" src={CheckSelectedTracks}/>
+  <Typography variant="body1">To make sure they are being sent to the right group, click the small arrow next to the track name and set the bottom option to the groups you named earlier.</Typography>
   <Image alt="ableton groups" src={GroupAbletonTracks}/>
 </Stack>;
 
 const routingSheet = <Stack spacing={1}>
   <Typography variant="body1">Once all the tracks have been grouped properly, open Chrome and go to the <i>Routing</i> bookmark. Navigate to the <i>Channels</i> tab.</Typography>
   <Image alt="google sheet" src={RoutingSheet}/>
-  <Typography variant="body1"> Change the cells in the <i>Name</i> column to match the groups on Ableton. Don&apos;t forget to change the <i>Terminal</i> column too! The Dante input should match the group number on Ableton.</Typography>
+  <Typography variant="body1"> Change the cells in the <i>Name</i> column to match the groups on Ableton. Don&apos;t forget to change the <i>Terminal</i> column, too! The Dante input should match the group number on Ableton.</Typography>
   <Image alt="sheet names" src={RoutingSheetNames}/>
   <Typography variant="body1"> In the example below, <i>EG1</i> is the first group on Ableton, so on the routing sheet, it is set to <i>Dante-Tracks-IN-01</i></Typography>.
   <Image alt="set terminals" src={SetTerminals}/>
