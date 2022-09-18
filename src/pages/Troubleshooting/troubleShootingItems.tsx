@@ -2,6 +2,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { Step } from "../../types/steps";
 import Reverb from "../../assets/images/Reverb.webp";
+import PitchShift from "../../assets/images/AbletonPitchShift.webp";
 import { Image } from "../../components/Image";
 
 export const troubleShootingItems: Step[] = [
@@ -38,6 +39,16 @@ export const troubleShootingItems: Step[] = [
       <Typography variant="body1">Also make sure that there aren&apos; any tracks being soloed. Click the <i>S</i> to the right of the track to toggle it on or off.</Typography>
     </Stack>,
   },
+  {
+    title: `Need to change the key of a song on Ableton?`,
+    description: <Stack spacing={1}>
+      <Typography variant="body1">If you need to change the key of a song, you&apos;ll need to warp the tracks in Ableton. Go through all the tracks and see which ones need pitch shifting. (Typically, percussion tracks won&apos;t need to be changed, but check to make sure there are no musical elements within the track).</Typography>
+      <Typography variant="body1">Select the individual audio clips by holding <i>Shift</i> and clicking on them. Then, if you don&apos; already see the large audio waveform at the bottom, you can click the tiny on in the bottom right corner.</Typography>
+      <Typography variant="body1">You should see a panel on the bottom left. Make sure <i>Warp</i> is enabled. (If it&apos;s not yellow, click it once). Then, from the drop down directly beneath the <i>Warp</i> button, choose <i>Complex Pro</i>. Finally, take a look at the dial labelled <i>Pitch</i> to the right. You can double click it and enter a number to move to the right key.</Typography>
+      <Typography variant="body1">Remember that each number you raise or lower by corresponds to a half-step. For example, if you are in the key of <i>B</i>, and you want to go to <i>C</i>, that&apos;s one half-step (C &gt; B), so you should type in <i>1</i>. As another example, if you want to go from <i>A</i> down to <i>F</i>, that will be 4 half-steps (A &gt; G# &gt; G &gt; F# &gt; F), so type in <i>-4</i></Typography>
+      <Image alt="pitch-shift" src={PitchShift}/>
+    </Stack>
+  }
   // {
   //     title: ,
   //     description: ,
